@@ -1,18 +1,17 @@
-# Clase4...
+# Clase5...
 
 ###Repaso clase anterior: 
-Data binding, one way, two ways, string interpolation, property interpolation, funciones, angular events. Incompatibilidades con jQuery. Life cycle.
+Programación orientada a componentes e interacción entre estos. @Input y @Output, @ViewChild, Servicios
 
 ##Esta clase:
-Programación orientada a componentes e interacción entre estos. @Input y @Output, @ViewChild, Servicios
+Clases, estilos, view encapsultaion. Estilos globales, :host
+
  
 ##La siguiente:
-Clases, estilos, view encapsultaion. Estilos globales, :host
+Directivas, utilización de directivas existentes. NgIf, NgFor, NgSwitch, NgTemplate
 
 
 -----
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
 ## Development server
 
