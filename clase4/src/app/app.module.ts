@@ -6,13 +6,15 @@ import { PadreComponent } from './padre/padre.component';
 import { HijoDosComponent } from './hijo-dos/hijo-dos.component';
 import { HijoUnoComponent } from './hijo-uno/hijo-uno.component';
 import {FormsModule} from '@angular/forms';
+import { TrespuntitosPipe } from './trespuntitos.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
     HijoDosComponent,
-    HijoUnoComponent
+    HijoUnoComponent,
+    TrespuntitosPipe
   ],
   imports: [
     BrowserModule,

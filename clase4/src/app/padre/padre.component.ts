@@ -1,19 +1,22 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {FamiliaService} from '../familia.service';
-import {BehaviorSubject} from 'rxjs';
+import {HijoUnoComponent} from '../hijo-uno/hijo-uno.component';
 
 @Component({
   selector: 'app-padre',
   templateUrl: './padre.component.html',
   styleUrls: ['./padre.component.css']
 })
-export class PadreComponent implements OnInit {
+export class PadreComponent implements OnInit, OnDestroy {
 
   public apellido;
+  private subscription;
+  @ViewChild(HijoUnoComponent, {static: false})
+  private hijoUno: HijoUnoComponent;
 
   constructor(private familiaService: FamiliaService) {
-    this.familiaService.apellido$.subscribe(apellido => {
-      this.apellido = apellido;
+    this.subscription = this.familiaService.apellido$.subscribe(value => {
+      this.apellido = value;
     });
   }
 
@@ -23,5 +26,13 @@ export class PadreComponent implements OnInit {
 
   actualizar() {
     this.familiaService.cambiarApellido(this.apellido);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+  cambiarNombreDeHijoUno() {
+    this.hijoUno.cambiarNombre();
   }
 }

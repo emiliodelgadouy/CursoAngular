@@ -8,13 +8,13 @@ import {FamiliaService} from '../familia.service';
 })
 export class HijoDosComponent implements OnInit {
 
-  public nombre = 'pablo';
+  public nombre = 'Pablo';
   public apellido = 'default';
 
 
   constructor(private familiaService: FamiliaService) {
-    this.familiaService.apellido$.subscribe(apellido => {
-      this.apellido = apellido;
+    this.familiaService.apellido$.subscribe(value => {
+      this.apellido = value;
     });
   }
 

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FamiliaService} from '../familia.service';
 
 @Component({
@@ -6,20 +6,15 @@ import {FamiliaService} from '../familia.service';
   templateUrl: './hijo-uno.component.html',
   styleUrls: ['./hijo-uno.component.css']
 })
-export class HijoUnoComponent implements OnInit {
+export class HijoUnoComponent {
 
   public nombre = 'Miguel';
-  public apellido = 'default';
-
 
   constructor(private familiaService: FamiliaService) {
-    this.familiaService.apellido$.subscribe(apellido => {
-      this.apellido = apellido;
-    });
   }
 
-
-  ngOnInit() {
+  public cambiarNombre() {
+    this.nombre = 'Manolo';
   }
 
 }
