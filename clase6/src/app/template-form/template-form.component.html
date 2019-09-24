@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()">
+  <label for="nombre">Nombre</label>
+  <input required name="nombre" type="text" id="nombre" [(ngModel)]="sala.nombre"><br/>
+
+  <label for="capacidad">Capacidad</label>
+  <input name="capacidad" type="text" id="capacidad" [(ngModel)]="sala.capacidad"><br/>
+
+  <label for="sectores">Sectores</label>
+  <select name="sectores" id="sectores" [(ngModel)]="sala.sectores">
+    <option *ngFor="let sector of sectores" value="{{sector.nombre}}">Sector {{sector.nombre}}</option>
+  </select><br/>
+
+
+  <input value="Enviar" type="submit"/>
+</form>
