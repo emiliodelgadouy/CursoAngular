@@ -1,0 +1,94 @@
+{
+  "salas": [
+    {
+      "id": 2,
+      "nombre": "Sala 3",
+      "capacidad": "25",
+      "sectores": [
+        {
+          "id": 2,
+          "nombre": "Sector 2"
+        },
+        {
+          "id": 3,
+          "nombre": "Sector 3"
+        }
+      ],
+      "usuario": "mengano"
+    },
+    {
+      "id": 3,
+      "nombre": "Sala 3",
+      "capacidad": "25"
+    },
+    {
+      "id": 4,
+      "nombre": "Sala 3",
+      "capacidad": "25"
+    },
+    {
+      "nombre": "dffd",
+      "capacidad": "4",
+      "id": 6
+    },
+    {
+      "nombre": "s",
+      "capacidad": "s",
+      "id": 7
+    },
+    {
+      "sectores": [
+        {
+          "id": 2,
+          "nombre": "Sector 2"
+        }
+      ],
+      "id": 8,
+      "nombre": "asdad",
+      "capacidad": "1"
+    },
+    {
+      "sectores": [],
+      "nombre": "asd",
+      "capacidad": "asdsa",
+      "id": 9
+    },
+    {
+      "sectores": [],
+      "nombre": "asda",
+      "capacidad": "asdas",
+      "usuario": "mengano",
+      "id": 10
+    }
+  ],
+  "sectores": [
+    {
+      "id": 3,
+      "nombre": "SECTOR 3X",
+      "usuario": "mengano"
+    },
+    {
+      "id": 4,
+      "nombre": "Sector 4"
+    },
+    {
+      "id": 5,
+      "nombre": "Sector 5"
+    },
+    {
+      "nombre": "sector N",
+      "usuario": "mengano",
+      "id": 6
+    },
+    {
+      "nombre": "sdfsdfdsf",
+      "usuario": "mengano",
+      "id": 7
+    },
+    {
+      "nombre": "hjghghjg",
+      "usuario": "mengano",
+      "id": 8
+    }
+  ]
+}

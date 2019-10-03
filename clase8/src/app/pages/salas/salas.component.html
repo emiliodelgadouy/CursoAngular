@@ -1,0 +1,9 @@
+<app-sala [sala]="sala"></app-sala>
+
+<ul *ngFor="let sala of salas$ |async">
+  <li>#{{sala.id}} {{sala.nombre}} capacidad:{{sala.capacidad}}
+    <span *ngFor="let sector of sala.sectores">{{sector.nombre}} </span>
+    <button (click)="delete(sala.id)">Eliminar</button>
+    <button (click)="edit(sala)">Editar</button>
+  </li>
+</ul>

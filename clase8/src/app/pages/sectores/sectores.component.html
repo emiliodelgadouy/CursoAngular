@@ -1,0 +1,8 @@
+<app-sector [sector]="sector"></app-sector>
+
+<ul *ngFor="let sector of sectores$|async">
+  <li>#{{sector.id}} {{sector.nombre}} <button (click)="remove(sector.id)">Eliminar</button><button (click)="update(sector)">Editar</button></li>
+</ul>
+
+
+{{sector | json}}
