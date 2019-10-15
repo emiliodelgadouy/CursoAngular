@@ -18,7 +18,7 @@ export class VehiculoComponent implements OnDestroy {
   private busy = false;
 
   constructor(private activatedRoute: ActivatedRoute, private vehiculoService: VehiculoService, private router: Router) {
-    this.subscription = this.activatedRoute.data.pipe(filter(data => data.vehiculo)).subscribe(data => {
+    this.subscription = this.activatedRoute.data.subscribe(data => {
       this.vehiculo = data.vehiculo;
       if (!this.vehiculo.id) {
         this.enabled = true;
@@ -28,7 +28,7 @@ export class VehiculoComponent implements OnDestroy {
 
   guardar() {
     this.busy = true;
-    this.vehiculoService.save(this.vehiculo).pipe().subscribe(() => {
+    this.vehiculoService.save(this.vehiculo).subscribe(() => {
       this.busy = false;
       this.router.navigate(['vehiculos']);
     });

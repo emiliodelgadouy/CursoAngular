@@ -9,11 +9,7 @@ import {Observable, of} from 'rxjs';
 })
 export class NewVehiculoResolver implements Resolve<Vehiculo> {
 
-  constructor(private vehiculoService: VehiculoService) {
-  }
-
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Vehiculo> | Promise<Vehiculo> | Vehiculo {
-    console.log("parsaasas")
     return of(new Vehiculo());
   }
 }

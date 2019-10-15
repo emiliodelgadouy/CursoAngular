@@ -8,6 +8,8 @@ import {VehiculoModule} from './vehiculo/vehiculo.module';
 import {ClienteModule} from './cliente/cliente.module';
 import {GetVehiculoResolver} from './vehiculo/resolvers/get-vehiculo.service';
 import {NewVehiculoResolver} from './vehiculo/resolvers/new-vehiculo.service';
+import {GetClienteResolver} from './cliente/resolvers/get-cliente.service';
+import {NewClienteResolver} from './cliente/resolvers/new-cliente.service';
 
 
 const routes: Routes = [
@@ -28,8 +30,18 @@ const routes: Routes = [
   },
 
   {path: 'clientes', component: ClientesComponent},
-  {path: 'clientes/:id', component: ClienteComponent},
-  {path: 'clientes/nuevo', component: ClienteComponent},
+  {
+    path: 'clientes/nuevo', component: ClienteComponent,
+    resolve: {
+      cliente: NewClienteResolver
+    }
+  },
+  {
+    path: 'clientes/:id', component: ClienteComponent,
+    resolve: {
+      cliente: GetClienteResolver
+    }
+  },
 
 ];
 

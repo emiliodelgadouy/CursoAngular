@@ -14,7 +14,6 @@ export class ConfirmationComponent {
   private busy = false;
 
   constructor(public dialogRef: MatDialogRef<ConfirmationComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
-    console.log(this.data);
     this.message = this.data.message;
     this.action = this.data.action;
   }

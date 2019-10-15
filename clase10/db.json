@@ -18,5 +18,44 @@
       "descripcion": "descripcion",
       "id": 6
     }
+  ],
+  "clientes": [
+    {
+      "vehiculos": [],
+      "nombre": "nombre 1",
+      "razonSocial": "razon 1",
+      "rut": "rut 1",
+      "domicilio": "domicilio 1",
+      "telefono": "telefono 1",
+      "id": 1
+    },
+    {
+      "vehiculos": [
+        {
+          "matricula": "l",
+          "tipo": "l",
+          "descripcion": "l\n",
+          "id": 4
+        },
+        {
+          "matricula": "LRP 009",
+          "tipo": "Omnibus",
+          "descripcion": "sarasa",
+          "id": 5
+        },
+        {
+          "matricula": "uno",
+          "tipo": "tipo",
+          "descripcion": "descripcion",
+          "id": 6
+        }
+      ],
+      "nombre": "1",
+      "razonSocial": "2",
+      "rut": "3",
+      "domicilio": "4",
+      "telefono": "5",
+      "id": 2
+    }
   ]
 }

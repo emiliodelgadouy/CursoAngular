@@ -1,1 +1,51 @@
-<p>cliente works!</p>
+<ng-container *ngIf="cliente">
+  <mat-chip-list>
+    <mat-chip routerLink="/clientes" color="primary" selected>Cliente</mat-chip>
+    <mat-chip color="primary" *ngIf="!cliente.id" selected>Nuevo</mat-chip>
+    <mat-chip color="primary" *ngIf="cliente.id" selected># {{cliente.id}}</mat-chip>
+  </mat-chip-list>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Clientes</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <input [disabled]="!enabled" [(ngModel)]="cliente.nombre" matInput name="nombre" placeholder="Nombre">
+      </mat-form-field>
+      <mat-form-field>
+        <input [disabled]="!enabled" [(ngModel)]="cliente.razonSocial" matInput name="razonSocial"
+               placeholder="Razón Social">
+      </mat-form-field>
+      <mat-form-field>
+        <input [disabled]="!enabled" [(ngModel)]="cliente.rut" matInput name="rut" placeholder="RUT"/>
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input [disabled]="!enabled" [(ngModel)]="cliente.domicilio" matInput name="domicilio" placeholder="Domicilio">
+      </mat-form-field>
+      <mat-form-field>
+        <input [disabled]="!enabled" [(ngModel)]="cliente.telefono" matInput name="telefono" placeholder="Telefono">
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <mat-label>Vehiculos</mat-label>
+        <mat-select [disabled]="!enabled" [compareWith]="comparator" [(ngModel)]="cliente.vehiculos" multiple>
+          <mat-option *ngFor="let vehiculo of vehiculos$ | async" [value]="vehiculo">{{vehiculo.matricula}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <mat-slide-toggle [(ngModel)]="enabled">{{ enabled ? 'Desbloqueado' : 'Bloqueado' }}</mat-slide-toggle>
+      <button [disabled]="busy" *ngIf="enabled" (click)="guardar()" color="primary" mat-raised-button>
+        <mat-icon *ngIf="busy">
+          <mat-spinner color="accent" diameter="20">
+          </mat-spinner>
+        </mat-icon>
+        {{busy ? 'Guardando' : 'Guardar'}}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>
+

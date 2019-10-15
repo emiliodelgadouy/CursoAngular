@@ -1,5 +1,5 @@
 <ng-container *ngIf="vehiculo">
-  <mat-chip-list aria-label="Fish selection">
+  <mat-chip-list>
     <mat-chip routerLink="/vehiculos" color="primary" selected>Vehículos</mat-chip>
     <mat-chip color="primary" *ngIf="!vehiculo.id" selected>Nuevo</mat-chip>
     <mat-chip color="primary" *ngIf="vehiculo.id" selected># {{vehiculo.id}}</mat-chip>
