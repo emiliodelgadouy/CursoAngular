@@ -1,0 +1,22 @@
+{
+  "vehiculos": [
+    {
+      "matricula": "l",
+      "tipo": "l",
+      "descripcion": "l\n",
+      "id": 4
+    },
+    {
+      "matricula": "LRP 009",
+      "tipo": "Omnibus",
+      "descripcion": "sarasa",
+      "id": 5
+    },
+    {
+      "matricula": "uno",
+      "tipo": "tipo",
+      "descripcion": "descripcion",
+      "id": 6
+    }
+  ]
+}
